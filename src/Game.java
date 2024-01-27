@@ -98,6 +98,9 @@ public class Game {
 				placeSign(input[1]);
 				break;
 			}
+		
+		case "standing":
+			printStandings();
 			
 		default:
 			System.out.println(input[0] + " is not a valid command.");
@@ -259,6 +262,13 @@ public class Game {
 				System.out.println("Please enter yes or no.");
 				
 			}
+		}
+	}
+	
+	private void printStandings() {
+		System.out.println();
+		for(Player i : players) {
+			System.out.println(i.getName() + " has won " + i.getTotalWins() + "x");
 		}
 	}
 }
